@@ -1,0 +1,120 @@
+title: Janusz Nowak
+email: janono@gmail.com
+description: >-
+  Software Developer/Architect with over 15 years of experience, flustered with approach “It works on my computer” use DevOps practice for over 11 years, natural path going Cloud 7 years.
+  Passionate about ALM, Cloud, Server less, Infrastructure as Code :) Azure, Cloud, DevOps, Lean.
+baseurl: '' # the subpath of your site, e.g. /blog
+url: https://blog.janono.pl   # the base hostname & protocol for your site, e.g. http://example.com
+twitter_username: jnowwwak
+github_username: janusznowak
+search: true
+locale: en
+
+markdown: kramdown
+remote_theme: mmistakes/minimal-mistakes
+permalink: /:categories/:title/
+paginate: 6 # amount of posts to show
+paginate_path: /page:num/
+timezone: PL
+breadcrumbs: true
+
+minimal_mistakes_skin: dirt
+
+include:
+- _pages
+plugins:
+- jekyll-feed
+- jekyll-paginate
+- jekyll-sitemap
+- jekyll-gist
+- jemoji
+- jekyll-include-cache
+
+author:
+  name: Janusz Nowak
+  avatar: https://avatars1.githubusercontent.com/u/5168275
+  bio: Developer, DevOps, Cloud, Lean Geek Azure Heroes Microsoft Certified Trainer.
+  location: Poland - Warsaw
+  links:
+  - label: LinkedIn
+    icon: fab fa-fw fa-linkedin
+    url: https://www.linkedin.com/in/janono/
+  - label: Twitter
+    icon: fab fa-fw fa-twitter-square
+    url: https://twitter.com/jnowwwak
+  - label: GitHub
+    icon: fab fa-fw fa-github
+    url: https://github.com/janusznowak
+  - label: Facebook
+    icon: fab fa-fw fa-facebook
+    url: https://www.facebook.com/jnowwwak
+  - label: YouTube
+    icon: fab fa-fw fa-youtube
+    url: https://www.youtube.com/c/JanuszNowakjanono
+  - label: StackOverflow
+    icon: fab fa-fw fa-stack-overflow
+    url: https://stackoverflow.com/users/1878728/janusz-nowak
+
+footer:
+  links:
+  - label: LinkedIn
+    icon: fab fa-fw fa-linkedin
+    url: https://www.linkedin.com/in/janono/
+  - label: Twitter
+    icon: fab fa-fw fa-twitter-square
+    url: https://twitter.com/jnowwwak
+  - label: GitHub
+    icon: fab fa-fw fa-github
+    url: https://github.com/janusznowak
+  - label: Facebook
+    icon: fab fa-fw fa-facebook
+    url: https://www.facebook.com/jnowwwak
+  - label: YouTube
+    icon: fab fa-fw fa-youtube
+    url: https://www.youtube.com/c/JanuszNowakjanono
+  - label: StackOverflow
+    icon: fab fa-fw fa-stack-overflow
+    url: https://stackoverflow.com/users/1878728/janusz-nowak
+
+defaults:
+- scope:
+    path: ''
+    type: posts
+  values:
+    layout: single
+    classes: wide
+    author_profile: true
+    read_time: true
+    comments: true
+    share: true
+    related: true
+- scope:
+    path: _pages
+    type: pages
+  values:
+    layout: single
+    author_profile: true
+    classes: wide
+
+category_archive:
+  type: liquid
+  path: /categories/
+tag_archive:
+  type: liquid
+  path: /tags/
+
+comments:
+  provider: disqus
+  disqus:
+    shortname: janono
+
+analytics:
+  provider: google
+  google:
+    tracking_id: UA-141219604-1
+    anonymize_ip: false
+
+analytics2:
+  provider: azure
+  azure:
+    instrumentation_key: 03a77086-412d-4d25-b919-57631fd6c939
