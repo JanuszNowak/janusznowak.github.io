@@ -17,7 +17,7 @@ tags:
   - Extension
 ---
 
-On previous [post](./_post_/2021-12-20-AzureBicepMigrationFromArm.md) how to migrate from existing ARM template to Azure Bicep.
+On previous [post](./MicrosoftAzureBicepMIgrationFromArm) how to migrate from existing ARM template to Azure Bicep.
 On this one we will cover about tooling with can support our development.
 
 # Visual Studio Code install

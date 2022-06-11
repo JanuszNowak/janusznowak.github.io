@@ -16,7 +16,7 @@ tags:
 
 # Azure Bicep migrating from ARM template
 
-On previous [post](./_post_/2021-11-23-AzureBicepGettingStarted.md) we cover how to get started with Azure Bicep.
+On previous [post](./MicrosoftAzureBicepGettingStarted) we cover how to get started with Azure Bicep.
 On this one we will cover how to migrate existing ARM template to Azure Bicep.
 
 We will start from existing ARM template "azuredeploy.json"

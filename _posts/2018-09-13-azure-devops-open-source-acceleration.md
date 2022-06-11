@@ -26,7 +26,7 @@ tags:
 
 There was awesome new few days ago on [Azure blog](https://azure.microsoft.com/en-us/blog/introducing-azure-devops/) about changing Vsts to Azure DevOps, on fist look it look to be not important.
 
-![Azure DevOps](/wp-content/uploads/2018/09/index-hero-300x258.webp)
+![Azure DevOps](/wp-content/uploads/2018/09/index-hero.webp)
 
 But after look is seams to be a very important step by giving all unlimited CI/CD minutes for open source [Announcing Azure Pipelines with unlimited CI/CD minutes for open source](https://azure.microsoft.com/en-us/blog/announcing-azure-pipelines-with-unlimited-ci-cd-minutes-for-open-source/).
 

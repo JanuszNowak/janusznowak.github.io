@@ -3,7 +3,7 @@ title: Microsoft Azure Bicep Getting Started
 author: Janusz Nowak
 header:
   teaser: /wp-content/uploads/2021/MicrosoftAzureBicepGettingStarted.webp
-permalink: /MicrosoftAzureBicepGettingStarted
+permalink: /post/MicrosoftAzureBicepGettingStarted
 categories:
   - Azure
   - Bicep
@@ -15,7 +15,7 @@ tags:
 
 # Azure Bicep Getting Started
 
-On previous [post](./_post_/2021-10-21-AzureBicepIntroduciton.md) we cover the general introduction to Azure Bicep.
+On previous [post](./MicrosoftAzureBicepIntroduction) we cover the general introduction to Azure Bicep.
 
 ## Installation
 
