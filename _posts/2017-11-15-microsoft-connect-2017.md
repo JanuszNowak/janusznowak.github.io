@@ -7,7 +7,7 @@ author: Janusz Nowak
 guid: http://blog.janono.pl/?p=289
 permalink: /2017/11/microsoft-connect-2017/
 header:
-  teaser: /wp-content/uploads/2017/11/connect2017.jpg
+  teaser: /wp-content/uploads/2017/11/connect2017.webp
 categories:
   - Event
 tags:

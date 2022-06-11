@@ -2,7 +2,7 @@
 title: Microsoft Azure Certifications Path 2022
 author: Janusz Nowak
 header:
-  teaser: /wp-content/uploads/2022/Become Microsoft Certified.png
+  teaser: /wp-content/uploads/2022/Become Microsoft Certified.webp
 permalink: /Microsoft-Azure-Certifications-Path-2022
 categories:
   - Azure
@@ -19,4 +19,4 @@ With new 2022 year there was also introduced new certification path, there was s
 
 <br/>
 There come few new certifications compare to road map from 2020 year.
-![azure-certification-path-2020](/wp-content/uploads/2022/azure-certification-path-2020.png)
+![azure-certification-path-2020](/wp-content/uploads/2022/azure-certification-path-2020.webp)

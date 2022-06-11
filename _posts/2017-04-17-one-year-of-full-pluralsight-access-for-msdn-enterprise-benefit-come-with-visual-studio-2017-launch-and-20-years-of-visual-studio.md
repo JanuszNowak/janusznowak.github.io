@@ -5,7 +5,7 @@ date: 2017-04-17T17:16:54+02:00
 author: Janusz Nowak
 permalink: /2017/04/one-year-of-full-pluralsight-access-for-msdn-enterprise-benefit-come-with-visual-studio-2017-launch-and-20-years-of-visual-studio/
 header:
-  teaser: /wp-content/uploads/2017/04/pluralsight-logo-hor-color-1@2x1.png
+  teaser: /wp-content/uploads/2017/04/pluralsight-logo-hor-color-1@2x1.webp
 categories:
   - Uncategorized
 tags:

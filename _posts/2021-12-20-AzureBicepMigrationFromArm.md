@@ -2,7 +2,7 @@
 title: Microsoft Azure Bicep migration from ARM Templates
 author: Janusz Nowak
 header:
-  teaser: /wp-content/uploads/2021/MicrosoftAzureBicepGettingStartedDecompile.png
+  teaser: /wp-content/uploads/2021/MicrosoftAzureBicepGettingStartedDecompile.webp
 permalink: /MicrosoftAzureBicepMIgrationFromArm
 categories:
   - Azure

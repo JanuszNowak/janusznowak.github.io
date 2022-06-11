@@ -2,7 +2,7 @@
 title: Microsoft Azure Bicep Introduction
 author: Janusz Nowak
 header:
-  teaser: /wp-content/uploads/2021/bicep.png
+  teaser: /wp-content/uploads/2021/bicep.webp
 permalink: /MicrosoftAzureBicepIntroduction
 categories:
   - Azure

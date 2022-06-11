@@ -2,7 +2,7 @@
 title: MIMUW TechTalk - Azure DevOps - Deploy Anything Anywhere
 author: Janusz Nowak
 header:
-  teaser: /wp-content/uploads/2020/03/MIMUW-TechTalk-2020-03-05_01.jpg
+  teaser: /wp-content/uploads/2020/03/MIMUW-TechTalk-2020-03-05_01.webp
 permalink: /Conference-MIMUW-TechTalk-Azure-DevOps-Deploy-Anything-Anywhere/
 categories:
   - Azure DevOps
@@ -24,14 +24,14 @@ tags:
   - Tech Talk
   - MIMUW
 gallery:
-  - url: /wp-content/uploads/2020/03/20.03.05 - MIMUW Tech-Talk 1.jpg
-    image_path: /wp-content/uploads/2020/03/20.03.05 - MIMUW Tech-Talk 1.jpg
+  - url: /wp-content/uploads/2020/03/20.03.05 - MIMUW Tech-Talk 1.webp
+    image_path: /wp-content/uploads/2020/03/20.03.05 - MIMUW Tech-Talk 1.webp
     alt: "MIMUW Tech-Talk 1"
-  - url: /wp-content/uploads/2020/03/20.03.05 - MIMUW Tech-Talk 2.jpg
-    image_path: /wp-content/uploads/2020/03/20.03.05 - MIMUW Tech-Talk 2.jpg
+  - url: /wp-content/uploads/2020/03/20.03.05 - MIMUW Tech-Talk 2.webp
+    image_path: /wp-content/uploads/2020/03/20.03.05 - MIMUW Tech-Talk 2.webp
     alt: "MIMUW Tech-Talk 2"
-  - url: /wp-content/uploads/2020/03/20.03.05 - MIMUW Tech-Talk 3.jpg
-    image_path: /wp-content/uploads/2020/03/20.03.05 - MIMUW Tech-Talk 3.jpg
+  - url: /wp-content/uploads/2020/03/20.03.05 - MIMUW Tech-Talk 3.webp
+    image_path: /wp-content/uploads/2020/03/20.03.05 - MIMUW Tech-Talk 3.webp
     alt: "MIMUW Tech-Talk 3"
 ---
 

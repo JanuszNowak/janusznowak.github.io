@@ -2,7 +2,7 @@
 title: Microsoft Azure Bicep In Continues Integration Pull Request
 author: Janusz Nowak
 header:
-  teaser: /wp-content/uploads/2022/2022AzBicepValidate.png
+  teaser: /wp-content/uploads/2022/2022AzBicepValidate.webp
 permalink: /AzureBicepValidationOnPR
   - Azure
   - Bicep
@@ -22,7 +22,7 @@ tags:
 
 On previous [posts](./tags/#bicep) we have been introduced, how to get started, use extension or migrate from ARM templates for azure bicep or how to use in Continuous Delivery/Continuous Deployment.
 
-![2022AzBicepCreate](/wp-content/uploads/2022/2022AzBicepValidate.png)
+![2022AzBicepCreate](/wp-content/uploads/2022/2022AzBicepValidate.webp)
 
 # Azure Bicep in Continuous Integration Pipeline on Pull Request
 

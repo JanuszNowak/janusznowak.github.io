@@ -2,7 +2,7 @@
 title: Presentation from DotNetConfPL - Use Azure DevOps to deploy Azure Function in Docker on Raspberry PI
 author: Janusz Nowak
 header:
-  teaser: /wp-content/uploads/2019/10/2019-10-dotNetConf.png
+  teaser: /wp-content/uploads/2019/10/2019-10-dotNetConf.webp
 permalink: /Conference-DotNetConfPL-Use-Azure-DevOps-to-deploy-Azure-Function-in-Docker-on-Raspberry-PI/
 categories:
   - Azure DevOps

@@ -2,7 +2,7 @@
 title: Credly extract all badges
 author: Janusz Nowak
 header:
-  teaser: /wp-content/uploads/2022/2022-04_credly_extract_02.png
+  teaser: /wp-content/uploads/2022/2022-04_credly_extract_02.webp
 permalink: /CredlyExtractAllBadges/
 categories:
   - Azure
@@ -49,10 +49,10 @@ $cont|Out-File -FilePath "$($outPutPath)creadexport_local.html"
 
 After running script you html page will be generate with look like, and can be easy edit.
 
-![html](/wp-content/uploads/2022/2022-04_credly_extract_01.png)
+![html](/wp-content/uploads/2022/2022-04_credly_extract_01.webp)
 
 Also folder containing images of all badges will be created.
 
-![images](/wp-content/uploads/2022/2022-04_credly_extract_02.png)
+![images](/wp-content/uploads/2022/2022-04_credly_extract_02.webp)
 
 - [Github repository with code](https://github.com/JanuszNowak/credly-extractor/blob/master/credly-extractor.ps1)

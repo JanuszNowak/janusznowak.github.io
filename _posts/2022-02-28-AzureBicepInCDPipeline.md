@@ -2,7 +2,7 @@
 title: Microsoft Azure Bicep In Continues Deliver Pipeline
 author: Janusz Nowak
 header:
-  teaser: /wp-content/uploads/2022/2022AzBicepCreate.png
+  teaser: /wp-content/uploads/2022/2022AzBicepCreate.webp
 permalink: /MicrosoftAzureBicepInCDPipeline
 categories:
   - Azure
@@ -21,7 +21,7 @@ tags:
 
 On previous [posts](./tags/#bicep) we have been introduced, how to get started, use extension or migrate from ARM templates for azure bicep.
 
-![2022AzBicepCreate](/wp-content/uploads/2022/2022AzBicepCreate.png)
+![2022AzBicepCreate](/wp-content/uploads/2022/2022AzBicepCreate.webp)
 
 # Azure Bicep in Continuous Delivery pipeline
 

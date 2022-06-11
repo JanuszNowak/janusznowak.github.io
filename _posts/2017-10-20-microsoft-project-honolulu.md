@@ -7,7 +7,7 @@ author: Janusz Nowak
 guid: http://blog.janono.pl/?p=182
 permalink: /2017/10/microsoft-project-honolulu/
 header:
-  teaser: /wp-content/uploads/2017/10/honolulu-architecture.png
+  teaser: /wp-content/uploads/2017/10/honolulu-architecture.webp
 categories:
   - News
 tags:

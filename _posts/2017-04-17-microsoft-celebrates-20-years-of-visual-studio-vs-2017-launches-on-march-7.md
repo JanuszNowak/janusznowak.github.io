@@ -5,7 +5,7 @@ date: 2017-04-17T16:48:17+02:00
 author: Janusz Nowak
 permalink: /2017/04/microsoft-celebrates-20-years-of-visual-studio-vs-2017-launches-on-march-7/
 header:
-  teaser: /wp-content/uploads/2017/04/Swimlane-4-Willow-Installer-Default-Size.png
+  teaser: /wp-content/uploads/2017/04/Swimlane-4-Willow-Installer-Default-Size.webp
 categories:
   - Uncategorized
 tags:

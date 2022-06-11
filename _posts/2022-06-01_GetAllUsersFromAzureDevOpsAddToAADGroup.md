@@ -2,7 +2,7 @@
 title: Get All groups from Azure Active Directory
 author: Janusz Nowak
 header:
-  teaser: /wp-content/uploads/2022/2022-03-24-GetAllGroupsFromAzureActiveDirectory.png
+  teaser: /wp-content/uploads/2022/2022-03-24-GetAllGroupsFromAzureActiveDirectory.webp
 permalink: /GetAllGroupsFromAzureActiveDirectory/
 categories:
   - Azure

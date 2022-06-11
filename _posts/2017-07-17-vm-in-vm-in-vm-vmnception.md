@@ -7,7 +7,7 @@ author: Janusz Nowak
 guid: https://blogjanono.azurewebsites.net/?p=74
 permalink: /2017/07/vm-in-vm-in-vm-vmnception/
 header:
-  teaser: /wp-content/uploads/2017/07/88616c64-c513-44ac-8259-c201e1798106.png
+  teaser: /wp-content/uploads/2017/07/88616c64-c513-44ac-8259-c201e1798106.webp
 categories:
   - Uncategorized
 tags:

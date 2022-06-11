@@ -2,7 +2,7 @@
 title: Microsoft Spring Skills Challenge
 author: Janusz Nowak
 header:
-  teaser: /wp-content/uploads/2022/2022-MicrosoftSpringSkillsChallenge.jpg
+  teaser: /wp-content/uploads/2022/2022-MicrosoftSpringSkillsChallenge.webp
 permalink: /2022_MicrosoftSpringSkillsChallenge/
 categories:
   - Azure
@@ -23,7 +23,7 @@ tags:
 
 This spring, with the goal of boosting your career by adding new skills and certifications, Microsoft invite you to join the [Microsoft Spring Skills Challenge](https://pulse.microsoft.com/en/skill-forward-en/na/fa1-get-rewarded-for-gaining-tech-skills-and-free-certifications-at-the-microsoft-spring-skills-challenge/). They offer (all for free!)
 
-![Microsoft Spring Skills Challenge](/wp-content/uploads/2022/2022-MicrosoftSpringSkillsChallenge.jpg)
+![Microsoft Spring Skills Challenge](/wp-content/uploads/2022/2022-MicrosoftSpringSkillsChallenge.webp)
 
 [Microsoft Spring Skills Challenge](https://pulse.microsoft.com/en/skill-forward-en/na/fa1-get-rewarded-for-gaining-tech-skills-and-free-certifications-at-the-microsoft-spring-skills-challenge/)
 

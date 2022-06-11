@@ -2,7 +2,7 @@
 title: Microsoft Azure Bicep Getting Started
 author: Janusz Nowak
 header:
-  teaser: /wp-content/uploads/2021/MicrosoftAzureBicepGettingStarted.png
+  teaser: /wp-content/uploads/2021/MicrosoftAzureBicepGettingStarted.webp
 permalink: /MicrosoftAzureBicepGettingStarted
 categories:
   - Azure
@@ -82,7 +82,7 @@ az deployment group create -f ./main.bicep -g bicep-rg
 will create deployment group using file "main.bicep" in resource group "bicep-rg"
 and we suppose to se result in Azure Portal
 
-![Storage account with azure Bicep](/wp-content/uploads/2021/MicrosoftAzureBicepGettingStarted.png)
+![Storage account with azure Bicep](/wp-content/uploads/2021/MicrosoftAzureBicepGettingStarted.webp)
 
 ## Clean up
 

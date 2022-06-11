@@ -5,7 +5,7 @@ date: 2017-03-30T13:24:31+02:00
 author: Janusz Nowak
 permalink: /2017/03/mstechsummit/
 header:
-  teaser: /wp-content/uploads/2017/03/Copenhagen_VP4.jpg
+  teaser: /wp-content/uploads/2017/03/Copenhagen_VP4.webp
 categories:
   - Event
 tags:
@@ -16,6 +16,6 @@ tags:
   - MSTechSummit
 ---
 
-![Copenhagen](/wp-content/uploads/2017/03/Copenhagen_VP4.jpg = x776)
+![Copenhagen](/wp-content/uploads/2017/03/Copenhagen_VP4.webp = x776)
 
 <https://www.microsoft.com/da-dk/techsummit/copenhagen.aspx>

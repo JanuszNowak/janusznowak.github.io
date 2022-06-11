@@ -2,7 +2,7 @@
 title: Inżynierskie Targi Pracy 2022
 author: Janusz Nowak
 header:
-  teaser: /wp-content/uploads/2022/28.Inżynierskie Targi Pracy 2022.png
+  teaser: /wp-content/uploads/2022/28.Inżynierskie Targi Pracy 2022.webp
 permalink: /28.InżynierskieTargiPracy2022/
 categories:
   - Event
@@ -20,7 +20,7 @@ tags:
 
 Nagranie on-line z 28. Inżynierskich Targów Pracy 2022 roku. Na których miałem przyjemność wyjaśnić czym jest “DevOps” oraz poprowadzić warsztaty pokazujący zastosowanie podejścia zwinnego na Azure DevOps, GitHub oraz Azure Cloud.
 
-![28. Inżynierskie Targi Pracy 2022](/wp-content/uploads/2022/28.Inżynierskie Targi Pracy 2022.png)
+![28. Inżynierskie Targi Pracy 2022](/wp-content/uploads/2022/28.Inżynierskie Targi Pracy 2022.webp)
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/obHl5aK8iCs?start=330" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 

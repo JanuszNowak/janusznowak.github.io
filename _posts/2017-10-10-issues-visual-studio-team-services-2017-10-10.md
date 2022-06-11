@@ -7,7 +7,7 @@ author: Janusz Nowak
 guid: http://xprv-janono-blog.azurewebsites.net/?p=113
 permalink: /2017/10/issues-visual-studio-team-services-2017-10-10/
 header:
-  teaser: /wp-content/uploads/2017/10/2017-10-20-09_43_55-Show-bugs-on-backlogs-and-boards-_-Microsoft-Docs.png
+  teaser: /wp-content/uploads/2017/10/2017-10-20-09_43_55-Show-bugs-on-backlogs-and-boards-_-Microsoft-Docs.webp
 categories:
   - Uncategorized
 tags:

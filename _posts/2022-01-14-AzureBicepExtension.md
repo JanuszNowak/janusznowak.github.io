@@ -2,7 +2,7 @@
 title: Microsoft Azure Bicep VsCode Extension
 author: Janusz Nowak
 header:
-  teaser: /wp-content/uploads/2022/BicepExtension.png
+  teaser: /wp-content/uploads/2022/BicepExtension.webp
 permalink: /MicrosoftAzureBicepVsCodeExtension
 categories:
   - Azure
@@ -40,7 +40,7 @@ winget install -e --id Microsoft.VisualStudioCode
 
 After having Visual Studio Code installed, we visit [marketplace](https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-bicep) and press Install button
 
-![azure bicep extension](/wp-content/uploads/2022/BicepExtension.png)
+![azure bicep extension](/wp-content/uploads/2022/BicepExtension.webp)
 
 or we install extension [directly](https://code.visualstudio.com/docs/editor/extension-marketplace) from vs code
 

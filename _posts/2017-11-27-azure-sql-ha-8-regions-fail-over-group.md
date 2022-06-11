@@ -7,7 +7,7 @@ author: Janusz Nowak
 guid: http://blog.janono.pl/?p=285
 permalink: /2017/11/azure-sql-ha-8-regions-fail-over-group/
 header:
-  teaser: /wp-content/uploads/2017/11/2017-11-09-17_15_52-Geo-Replication-Microsoft-Azure.png
+  teaser: /wp-content/uploads/2017/11/2017-11-09-17_15_52-Geo-Replication-Microsoft-Azure.webp
 categories:
   - Azure Sql
 tags:
@@ -21,7 +21,7 @@ tags:
 format: image
 ---
 
-![Configure-performance-Microsoft-Azure](/wp-content/uploads/2017/11/2017-11-27-20_05_52-Configure-performance-Microsoft-Azure.png)
+![Configure-performance-Microsoft-Azure](/wp-content/uploads/2017/11/2017-11-27-20_05_52-Configure-performance-Microsoft-Azure.webp)
 
 # How to create free High Availability Azure Sql Db with fail-over group in 8 regions with Arm template for free
 
@@ -55,10 +55,10 @@ And the important are this 3 properties values on bottom edition, maxSizeBytes a
 If we will create azure sql database with this parameters values using arm template deployment.
 
 We will see that now we can see free version of azure sql database.
-![Configure-performance-Microsoft-Azure](/wp-content/uploads/2017/11/2017-11-27-20_05_17-Configure-performance-Microsoft-Azure.png)
+![Configure-performance-Microsoft-Azure](/wp-content/uploads/2017/11/2017-11-27-20_05_17-Configure-performance-Microsoft-Azure.webp)
 
 If we go now to our arm template and and will repeat sql resources multiple times or use arm template function copy-index and pass the list or regions as array we can create multiple azure sql databases for free. But this is not all because we what to have multiple read localization so we, go to azure portal create linked servers and check how it looks <https://resources.azure.com>, we repeat the same step to see how the fail over group are created.
 
 Going all this steps we are able to create arm template that will create free High Availability Azure Sql Db in 8 regions with fail-over group.
 
-![Geo-Replication-Microsoft-Azure](/wp-content/uploads/2017/11/2017-11-27-20_04_09-Geo-Replication-Microsoft-Azure.png)
+![Geo-Replication-Microsoft-Azure](/wp-content/uploads/2017/11/2017-11-27-20_04_09-Geo-Replication-Microsoft-Azure.webp)

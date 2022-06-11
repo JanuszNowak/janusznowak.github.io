@@ -1,5 +1,6 @@
 title: Janusz Nowak
 email: janono@gmail.com
+repository: JanuszNowak/janusznowak.github.io
 description: >-
   Software Developer/Architect with over 15 years of experience, flustered with approach “It works on my computer” use DevOps practice for over 11 years, natural path going Cloud 7 years.
   Passionate about ALM, Cloud, Server less, Infrastructure as Code :) Azure, Cloud, DevOps, Lean.
@@ -9,6 +10,8 @@ twitter_username: jnowwwak
 github_username: janusznowak
 search: true
 locale: en
+
+
 
 markdown: kramdown
 remote_theme: mmistakes/minimal-mistakes

@@ -7,7 +7,7 @@ author: Janusz Nowak
 guid: https://blogjanono.azurewebsites.net/?p=58
 permalink: /2017/06/msbuildtour-2017-warsaw/
 header:
-  teaser: /wp-content/uploads/2017/07/DCqlrOcXYAI-M5M.jpg
+  teaser: /wp-content/uploads/2017/07/DCqlrOcXYAI-M5M.webp
 categories:
   - Event
 tags:
@@ -16,6 +16,6 @@ tags:
   - Warsaw
 ---
 
-[![MSBuildTour](http://zabki.net.pl/~jnowak/wp-content/uploads/2017/07/DCqlrOcXYAI-M5M-300x225.jpg)](/wp-content/uploads/2017/07/DCqlrOcXYAI-M5M.jpg)
+[![MSBuildTour](http://zabki.net.pl/~jnowak/wp-content/uploads/2017/07/DCqlrOcXYAI-M5M-300x225.webp)](/wp-content/uploads/2017/07/DCqlrOcXYAI-M5M.webp)
 
 <https://blogs.windows.com/buildingapps/2017/05/17/announcing-microsoft-build-tour-2017/#WGJSwAM8B6AI0Sf7.97>

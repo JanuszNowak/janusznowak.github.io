@@ -2,7 +2,7 @@
 title: Microsoft Azure Bicep Modules
 author: Janusz Nowak
 header:
-  teaser: /wp-content/uploads/2022/bicep.png
+  teaser: /wp-content/uploads/2022/bicep.webp
 permalink: /MicrosoftAzureBicepModules
 categories:
   - Azure

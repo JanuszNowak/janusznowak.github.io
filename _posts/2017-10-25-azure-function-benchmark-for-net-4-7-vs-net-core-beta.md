@@ -11,7 +11,7 @@ ftf_open_type:
 disable_open_graph:
   - ""
 header:
-  teaser: /wp-content/uploads/2017/10/fun-bench.jpg
+  teaser: /wp-content/uploads/2017/10/fun-bench.webp
 categories:
   - .Net
   - .Net Core
@@ -31,11 +31,11 @@ That inspired me for some other approach to run the same code sample but on azur
 
 The size of machine for app service plan is S1, testing approach is ab benchmark tool running under windows hosted in azure, do not hit network limits or CPU the machine size is DS5_V2
 
-![Vm size](/wp-content/uploads/2017/10/s1.png)![Vm size](/wp-content/uploads/2017/10/DS5_V2.jpg)
+![Vm size](/wp-content/uploads/2017/10/s1.webp)![Vm size](/wp-content/uploads/2017/10/DS5_V2.webp)
 
 The setup is pre compiled Azure Function running .Net 4.7
 
-![runtime](/wp-content/uploads/2017/10/fun-runtime.jpg)
+![runtime](/wp-content/uploads/2017/10/fun-runtime.webp)
 
 ```csharp
 public static class Function1
@@ -91,7 +91,7 @@ public static class Function1
 
 vs Azure Function .Net Core having kestrel under hood in beta version
 
-![function beta](/wp-content/uploads/2017/10/functionbeta.png)
+![function beta](/wp-content/uploads/2017/10/functionbeta.webp)
 
 ```csharp
 #r "Newtonsoft.Json"
