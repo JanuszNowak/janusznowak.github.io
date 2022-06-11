@@ -1,6 +1,7 @@
 $libPath = "C:\Users\jnno\Downloads\libwebp-1.2.2-windows-x64\bin\cwebp.exe"
 $folder = "\\wsl.localhost\Ubuntu\home\jnno\janusznowak.github.io"
-$files = get-childitem $folder -recurse -force -include *.png
+$folder ="\\wsl.localhost\Ubuntu\home\jnno\janusznowak.github.ioOldv2\wp-content\uploads\2020\03"
+$files = get-childitem $folder -recurse -force -include *.jpg
 
 $files|Out-GridView
 foreach ($inputFile in $files) {

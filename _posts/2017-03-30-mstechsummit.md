@@ -16,6 +16,6 @@ tags:
   - MSTechSummit
 ---
 
-![Copenhagen](/wp-content/uploads/2017/03/Copenhagen_VP4.webp = x776)
+![Copenhagen](/wp-content/uploads/2017/03/Copenhagen_VP4.webp)
 
 <https://www.microsoft.com/da-dk/techsummit/copenhagen.aspx>

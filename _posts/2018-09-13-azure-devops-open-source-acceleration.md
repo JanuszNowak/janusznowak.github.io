@@ -38,19 +38,19 @@ The VSTS was spitted in 5 services:
 
 CI/CD that works with any language, platform, and cloud. Connect to GitHub or any Git repository and deploy continuously. [Learn More >](https://azure.microsoft.com/services/devops/pipelines/)
 
-## ![Azure Boards](/wp-content/uploads/2018/09/Azure-Boards.webp =x33) Azure Boards
+## ![Azure Boards](/wp-content/uploads/2018/09/Azure-Boards.webp) Azure Boards
 
 Powerful work tracking with Kanban boards, backlogs, team dashboards, and custom reporting. [Learn more](https://azure.microsoft.com/services/devops/boards/)
 
-## ![Azure Artifacts](/wp-content/uploads/2018/09/Azure-Artifacts.webp =x33) Azure Artifacts
+## ![Azure Artifacts](/wp-content/uploads/2018/09/Azure-Artifacts.webp) Azure Artifacts
 
 Maven, npm, and NuGet package feeds from public and private sources. [Learn more](https://azure.microsoft.com/services/devops/artifacts/)
 
-## ![Azure Repos](/wp-content/uploads/2018/09/Azure-Repos.webp =x33)Azure Repos
+## ![Azure Repos](/wp-content/uploads/2018/09/Azure-Repos.webp)Azure Repos
 
 Unlimited cloud-hosted private Git repos for your project. Collaborative pull requests, advanced file management, and more. [Learn more >](https://azure.microsoft.com/services/devops/repos/)
 
-## ![Azure Test Plans](/wp-content/uploads/2018/09/Azure-Test-Plans.webp =x33)Azure Test Plans
+## ![Azure Test Plans](/wp-content/uploads/2018/09/Azure-Test-Plans.webp)Azure Test Plans
 
 All in one planned and exploratory testing solution. [Learn more](https://azure.microsoft.com/services/devops/test-plans/)
 
@@ -74,10 +74,10 @@ How to activate it for GitHub, by pressing Install it and confirming order you w
 ![How to activate it for GitHub](/wp-content/uploads/2018/09/2018-09-13-08_06_19-Window.webp)
 Azure DevOps site where you will have option to login and create Azure Devops organization or use existing one
 
-![](/wp-content/uploads/2018/09/2018-09-13-08_06_55-Window.webp = x532)
+![](/wp-content/uploads/2018/09/2018-09-13-08_06_55-Window.webp)
 
 And after that you can see all repositories from GitHub with option for create pipeline for them 🙂
 
-![](/wp-content/uploads/2018/09/2018-09-13-08_10_06-Window.webp =x1362)
+![](/wp-content/uploads/2018/09/2018-09-13-08_10_06-Window.webp)
 
 I assume there will be even more good staff coming with Azure DevOps boosting a lot Open Source world and not only 🙂

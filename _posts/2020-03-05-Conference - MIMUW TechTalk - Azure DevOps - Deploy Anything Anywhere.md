@@ -24,14 +24,14 @@ tags:
   - Tech Talk
   - MIMUW
 gallery:
-  - url: /wp-content/uploads/2020/03/20.03.05 - MIMUW Tech-Talk 1.webp
-    image_path: /wp-content/uploads/2020/03/20.03.05 - MIMUW Tech-Talk 1.webp
+  - url: /wp-content/uploads/2020/03/MIMUWTechTalk1.webp
+    image_path: /wp-content/uploads/2020/03/MIMUWTechTalk1.webp
     alt: "MIMUW Tech-Talk 1"
-  - url: /wp-content/uploads/2020/03/20.03.05 - MIMUW Tech-Talk 2.webp
-    image_path: /wp-content/uploads/2020/03/20.03.05 - MIMUW Tech-Talk 2.webp
+  - url: /wp-content/uploads/2020/03/MIMUWTechTalk2.webp
+    image_path: /wp-content/uploads/2020/03/MIMUWTechTalk2.webp
     alt: "MIMUW Tech-Talk 2"
-  - url: /wp-content/uploads/2020/03/20.03.05 - MIMUW Tech-Talk 3.webp
-    image_path: /wp-content/uploads/2020/03/20.03.05 - MIMUW Tech-Talk 3.webp
+  - url: /wp-content/uploads/2020/03/MIMUWTechTalk3.webp
+    image_path: /wp-content/uploads/2020/03/MIMUWTechTalk3.webp
     alt: "MIMUW Tech-Talk 3"
 ---
 
