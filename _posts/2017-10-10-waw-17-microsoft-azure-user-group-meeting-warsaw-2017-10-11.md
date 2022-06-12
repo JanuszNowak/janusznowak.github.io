@@ -21,4 +21,4 @@ format: image
 
 Azure Day is coming 😉
 
-![WAW-17-Microsoft-Azure-User-Group-meeting-in-Warsaw](//wp-content/uploads/2017/10/WAW-17-Microsoft-Azure-User-Group-meeting-in-Warsaw-2017-10-11.webp)
+![WAW-17-Microsoft-Azure-User-Group-meeting-in-Warsaw](/wp-content/uploads/2017/10/WAW-17-Microsoft-Azure-User-Group-meeting-in-Warsaw-2017-10-11.webp)
