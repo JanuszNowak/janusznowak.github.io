@@ -1,8 +1,9 @@
 ---
 title: Azure DevOps o co w tym wszystkim chodzi?
 author: Janusz Nowak
+lang: pl
 header:
-  teaser: /wp-content/uploads/2019/12/Koduj_w_Płocku_2019_12.webp
+  teaser: /wp-content/uploads/2019/12/Koduj_w_Plocku_2019_12.webp
 permalink: /Conference-KodujWPłocku-Azure-DevOps-o-co-w-tym-wszystkim-chodzi/
 categories:
   - Azure DevOps

@@ -2,7 +2,7 @@
 title: Wrszawskie Dni Informatyki 2022
 author: Janusz Nowak
 header:
-  teaser: /wp-content/uploads/2022/Become Microsoft Certified.webp
+  teaser: /wp-content/uploads/2022/Become_Microsoft_Certified.webp
 permalink: /WrszawskieDniInformatyki2022/
 categories:
   - Azure
