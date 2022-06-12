@@ -44,6 +44,8 @@ gallery:
 
 On amazing event `The biggest celebration of Women in Tech & IT` on 7-8 June 2022 [Women In Tech Summit](https://womenintechsummit.pl/).I have got a please to run lecture, workshop about Why DevOps and Cloud. We run workshop on live example using [Azure DevOps](https://azure.microsoft.com/pl-pl/services/devops/), [Github](https://github.com/) and [Azure](https://azure.microsoft.com/) with usage of infrastructure as a code [Azure Bicep](https://docs.microsoft.com/en-us/azure/azure-resource-manager/bicep/overview?tabs=bicep) and [Azure Functions](https://azure.microsoft.com/en-us/services/functions). Material with we used can be found here - [Source code and IaC](https://github.com/JanuszNowak/janono.demo.WomenInTechSummit2022)
 
+Big thanks to the organizers, everyone involved for organizing the community conference, and thanks to the participants and the amazing energy.
+
 {% include gallery caption="Women In Tech Summit 2022." %}
 
 ## Links:

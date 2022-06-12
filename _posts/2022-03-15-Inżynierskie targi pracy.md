@@ -8,6 +8,7 @@ language: Polish
 categories:
   - Event
   - Community
+  - Conference
 tags:
   - Azure
   - Event
@@ -20,7 +21,7 @@ tags:
   - IoC
 ---
 
-Nagranie on-line z 28. Inżynierskich Targów Pracy 2022 roku. Na których miałem przyjemność wyjaśnić czym jest “DevOps” oraz poprowadzić warsztaty pokazujący zastosowanie podejścia zwinnego na Azure DevOps, GitHub oraz Azure Cloud.
+On-line recording of the 28th Engineering Job Fair 2022. During which I had the pleasure to explain what "DevOps" is and conduct workshops showing the use of an agile approach on Azure DevOps, GitHub and Azure Cloud.
 
 ![28. Inżynierskie Targi Pracy 2022](/wp-content/uploads/2022/28.Inżynierskie Targi Pracy 2022.webp)
 
@@ -28,7 +29,7 @@ Nagranie on-line z 28. Inżynierskich Targów Pracy 2022 roku. Na których miał
 
 Links:
 
-- [Kod źródłowy](https://github.com/JanuszNowak/janono.demo.tp2022)
+- [Source code](https://github.com/JanuszNowak/janono.demo.tp2022)
 - [Azure DevOps documentation](https://docs.microsoft.com/en-us/azure/devops/?view=azure-devops)
 - [Azure Functions documentation](https://docs.microsoft.com/en-gb/azure/azure-functions/)
 - [Github documentation](https://docs.github.com/en)
