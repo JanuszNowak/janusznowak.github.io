@@ -4,6 +4,7 @@ author: Janusz Nowak
 header:
   teaser: /wp-content/uploads/2022/28.Inżynierskie Targi Pracy 2022.webp
 permalink: /28.InżynierskieTargiPracy2022/
+language: Polish
 categories:
   - Event
   - Community
@@ -16,6 +17,7 @@ tags:
   - Azure Resource Manager
   - Code
   - GitHub
+  - IoC
 ---
 
 Nagranie on-line z 28. Inżynierskich Targów Pracy 2022 roku. Na których miałem przyjemność wyjaśnić czym jest “DevOps” oraz poprowadzić warsztaty pokazujący zastosowanie podejścia zwinnego na Azure DevOps, GitHub oraz Azure Cloud.
