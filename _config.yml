@@ -10,15 +10,12 @@ twitter_username: jnowwwak
 github_username: janusznowak
 search: true
 locale: en
-
-
-
 markdown: kramdown
 remote_theme: mmistakes/minimal-mistakes
 permalink: /:categories/:title/
 paginate: 6 # amount of posts to show
 paginate_path: /page:num/
-timezone: PL
+timezone: Poland
 breadcrumbs: true
 
 minimal_mistakes_skin: dirt
@@ -32,6 +29,7 @@ plugins:
 - jekyll-gist
 - jemoji
 - jekyll-include-cache
+- jekyll-seo-tag
 
 author:
   name: Janusz Nowak
