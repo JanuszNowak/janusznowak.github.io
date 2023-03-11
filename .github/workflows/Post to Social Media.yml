@@ -1,0 +1,88 @@
+name: Post to Social Media
+
+on:
+  workflow_dispatch:
+
+jobs:
+  post:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Find latest post
+        id: find-post
+        run: |
+          LATEST_POST=$(ls -t _posts/ | head -1)
+          echo "::set-output name=post-message::$(awk -F': ' '/title/ {print $2}' _posts/${LATEST_POST})"
+          echo "::set-output name=post-image::_posts/${LATEST_POST}"
+
+      - name: Check if message has already been posted
+        id: check-posts
+        uses: peter-evans/create-pull-request@v3.10.0
+        with:
+          commit-message: Check if message has already been posted
+          title: Check if message has already been posted
+          branch: check-posts
+          delete-branch: true
+          base: main
+          token: ${{ secrets.GITHUB_TOKEN }}
+          body: |
+            Check if the message has already been posted on social media.
+
+            ## Facebook
+            - ${{ steps.check-facebook.outputs.posted }}
+
+            ## LinkedIn
+            - ${{ steps.check-linkedin.outputs.posted }}
+
+            ## Twitter
+            - ${{ steps.check-twitter.outputs.posted }}
+
+            ## YouTube
+            - ${{ steps.check-youtube.outputs.posted }}
+
+            ## Mastodon
+            - ${{ steps.check-mastodon.outputs.posted }}
+
+            ## Instagram
+            - ${{ steps.check-instagram.outputs.posted }}
+
+            ## Media
+            - ${{ steps.check-media.outputs.posted }}
+
+      - name: Post to Facebook
+        id: check-facebook
+        uses: facebook-github-actions/post-to-facebook@v2
+        with:
+          page-id: ${{ secrets.FACEBOOK_PAGE_ID }}
+          access-token: ${{ secrets.FACEBOOK_ACCESS_TOKEN }}
+          message: ${{ steps.find-post.outputs.post-message }}
+          media-type: image
+          media-path: ${{ steps.find-post.outputs.post-image }}
+
+      - name: Post to LinkedIn
+        id: check-linkedin
+        uses: Ilshidur/action-linkedin@v1
+        with:
+          client-id: ${{ secrets.LINKEDIN_CLIENT_ID }}
+          client-secret: ${{ secrets.LINKEDIN_CLIENT_SECRET }}
+          access-token: ${{ secrets.LINKEDIN_ACCESS_TOKEN }}
+          message: ${{ steps.find-post.outputs.post-message }}
+          image-url: ${{ steps.find-post.outputs.post-image }}
+
+      - name: Post to Twitter
+        id: check-twitter
+        uses: actionsflow/actionsflow-twitter@v2
+        with:
+          consumer-key: ${{ secrets.TWITTER_CONSUMER_KEY }}
+          consumer-secret: ${{ secrets.TWITTER_CONSUMER_SECRET }}
+          access-token: ${{ secrets.TWITTER_ACCESS_TOKEN }}
+          access-token-secret: ${{ secrets.TWITTER_ACCESS_TOKEN_SECRET }}
+          tweet: ${{ steps.find-post.outputs.post-message }}
+          media-ids: |
+            $(curl --request POST --url https://upload.twitter.com/1.1/media/upload.json --header "Authorization: Bearer ${{ secrets.TWITTER_ACCESS_TOKEN }}" --header "Content-Type: application/octet-stream" --data-binary "@${{ steps.find-post.outputs.post-image }}" | jq -r '.media_id_string')
+
+      - name: Post to YouTube
+        id: check-youtube
+        uses: direwolf-tech/youtube-upload@v2
