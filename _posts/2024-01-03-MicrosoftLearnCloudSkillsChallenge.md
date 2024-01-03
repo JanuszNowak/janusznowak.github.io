@@ -3,7 +3,7 @@ title: Microsoft Learn Cloud Skills Challenge
 author: Janusz Nowak
 header:
   teaser: /wp-content/uploads/2023/2023_MicrosoftLearnCloudSkillsChallenge.webp
-permalink: /2023_MicrosoftLearnCloudSkillsChallenge/
+permalink: /post/2023_MicrosoftLearnCloudSkillsChallenge/
 categories:
   - Azure
   - Certification
