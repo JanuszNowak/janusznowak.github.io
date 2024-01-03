@@ -11,6 +11,7 @@ categories:
   - Community
   - Conference
   - 2023
+  - Ignite
 tags:
   - Azure
   - Ignite
@@ -27,6 +28,7 @@ tags:
   - Microsoft Learn
   - Azure Bicep
   - 2023
+  - Ignite
 ---
 
 Microsoft Ignite called `ignite` is an annual conference for developers and IT professionals hosted by Microsoft. Started in 1993 knows as TechEd, Microsoft altered its conference schedule and introduced the Microsoft Ignite name from 2015 on. Conference normally lasts between three and five days and consists of presentation and whiteboard sessions and hands-on labs. It offers opportunities to meet Microsoft experts. Networking is enhanced through parties, community areas and "Ask the Expert" sessions. There is a vast content catalog from which attendees can select sessions that will be most beneficial. An agenda is published online before the conference begins.
