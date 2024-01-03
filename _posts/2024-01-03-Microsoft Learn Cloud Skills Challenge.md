@@ -8,17 +8,14 @@ categories:
   - Azure
   - Certification
   - "2024"
+  - "2023"
 tags:
   - Azure
   - Certification
   - "2024"
+  - "2023"
   - Challenge
-  - Skills
-  - AZ-900
-  - AI-900
-  - DP-900
-  - PL-900
-  - SC-900
+  - Skills  
 ---
 # Unleash Your Potential: Microsoft Learn Cloud Skills Challenge!
 [Microsoft Learn Cloud Skills Challenge](https://www.microsoft.com/en-us/cloudskillschallenge/ignite/registration/2023?wt_mc_id=AZ-MVP-5005297)
