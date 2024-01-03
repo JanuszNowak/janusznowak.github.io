@@ -10,7 +10,7 @@ categories:
   - Event
   - Community
   - Conference
-  - 2023
+  - "2023"
   - Ignite
 tags:
   - Azure
@@ -27,7 +27,7 @@ tags:
   - Azure Hybrid
   - Microsoft Learn
   - Azure Bicep
-  - 2023
+  - "2023"
   - Ignite
 ---
 
