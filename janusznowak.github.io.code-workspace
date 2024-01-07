@@ -1,0 +1,19 @@
+{
+  "folders": [
+    {
+      "path": "."
+    }
+  ],
+  "settings": {
+    "cSpell.words": [
+      "janono",
+      "Janusz",
+      "Platforma",
+      "pwsh",
+      "Uncategorized",
+      "vsts",
+      "webp"
+    ],
+    "sarif-viewer.connectToGithubCodeScanning": "off"
+  }
+}
