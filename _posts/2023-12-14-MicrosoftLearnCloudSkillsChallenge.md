@@ -7,20 +7,21 @@ permalink: /post/2023_MicrosoftLearnCloudSkillsChallenge/
 categories:
   - Azure
   - Certification
-  - "2024"
   - "2023"
 tags:
   - Azure
   - Certification
-  - "2024"
   - "2023"
   - Challenge
-  - Skills  
+  - Skills
 ---
 # Unleash Your Potential: Microsoft Learn Cloud Skills Challenge!
 [Microsoft Learn Cloud Skills Challenge](https://www.microsoft.com/en-us/cloudskillschallenge/ignite/registration/2023?wt_mc_id=AZ-MVP-5005297)
- 
+
 Are you ready to level up your tech skills and elevate your career to new heights? Look no further! Microsoft invites you to embark on an exciting learning journey with the **Microsoft Learn Cloud Skills Challenge**, offering you a chance to win an exclusive VIP event pass for the next Microsoft Ignite or Microsoft Build.
+
+![Microsoft Learn Cloud Skills Challeng](/wp-content/uploads/2023/2023_MicrosoftLearnCloudSkillsChallenge.webp)
+
 
 ## What is the Microsoft Learn Cloud Skills Challenge?
 

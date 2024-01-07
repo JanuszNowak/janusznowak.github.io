@@ -39,4 +39,4 @@ gem "wdm", "~> 0.1.0" if Gem.win_platform?
 gem "webrick", "~> 1.8"
 
 #bundle install
-#bundle exec jekyll serve
+#bundle exec jekyll serve --incremental
