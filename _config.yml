@@ -34,9 +34,12 @@ plugins:
 author:
   name: Janusz Nowak
   avatar: https://avatars1.githubusercontent.com/u/5168275
-  bio: Developer, DevOps, Cloud, Lean Geek Azure Heroes Microsoft Certified Trainer.
+  bio: Microsoft MVP, Solution Architect, Developer, DevOps, Cloud, Lean Geek Azure Heroes Microsoft Certified Trainer.
   location: Poland - Warsaw
   links:
+  - label: MVP
+    icon: fab fa-fw fa-windows
+    url: https://mvp.microsoft.com/en-US/MVP/profile/27bb607b-95fb-ed11-8f6d-000d3a560942
   - label: LinkedIn
     icon: fab fa-fw fa-linkedin
     url: https://www.linkedin.com/in/janono/
@@ -58,6 +61,9 @@ author:
 
 footer:
   links:
+  - label: MVP
+    icon: fab fa-fw fab fa-fw fa-windows
+    url: https://mvp.microsoft.com/en-US/MVP/profile/27bb607b-95fb-ed11-8f6d-000d3a560942
   - label: LinkedIn
     icon: fab fa-fw fa-linkedin
     url: https://www.linkedin.com/in/janono/
