@@ -24,9 +24,38 @@ The official Azure Certification Poster is an excellent resource that maps out a
 
 ### Download the Certification Poster
 
+<img src="/wp-content/uploads/2025/azure-certifications.webp" alt="Azure Certification Poster">
+
 You can download the latest Azure Certification Poster here:
 
 [Azure Certification Poster (PDF)](https://arch-center.azureedge.net/Credentials/Certification-Poster_en-us.pdf)
+
+### What's New in Azure Certifications (2024-2025)
+
+Microsoft has significantly refreshed its certification portfolio to align with AI, Copilot, and modern cloud-native roles:
+
+#### New AI-Focused Certifications
+
+- **New Fundamentals Certification**: A new fundamentals certification covering AI skills, Microsoft 365 services, Copilot and agents, along with identity, security, and compliance basics via Microsoft Entra and Purview
+- **Expert AI Certification**: An advanced credential validating skills in generative AI, multi-agent orchestration, and agentic design using Copilot Studio, Azure AI services, and Dynamics 365
+
+#### New Specialist Certifications
+
+- **SC-401: Microsoft Defender XDR Specialist** (launched April 2024): Focuses on extended detection and response (XDR) using Microsoft Defender across endpoints, identities, and cloud apps
+
+#### Updated Certifications
+
+- **MD-102: Endpoint Administrator Associate**: Consolidates MD-100 and MD-101, covering device management, deployment, and policy control with cloud-native tools like Intune and Entra ID
+
+#### Retiring Certifications
+
+Microsoft is retiring several foundational certifications:
+
+- Microsoft Certified: Dynamics 365 Fundamentals (CRM) (MB-910) - Retiring December 31, 2025
+- Microsoft Certified: Dynamics 365 Fundamentals (ERP) (MB-920) - Retiring December 31, 2025
+- Microsoft 365 Certified: Fundamentals (MS-900) - Retiring March 31, 2026
+
+The shift reflects Microsoft's focus on AI, Copilot, security skills, and modern cloud workspace technologies.
 
 ### Certification Paths
 
