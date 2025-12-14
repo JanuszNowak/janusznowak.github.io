@@ -24,7 +24,7 @@ The official Azure Certification Poster is an excellent resource that maps out a
 
 ### Download the Certification Poster
 
-<img src="/wp-content/uploads/2025/azure-certifications.webp" alt="Azure Certification Poster">
+<img src="/wp-content/uploads/2025/azure-certifications.webp" alt="Microsoft Azure Certification Poster showing all available certification paths and requirements">
 
 You can download the latest Azure Certification Poster here:
 
