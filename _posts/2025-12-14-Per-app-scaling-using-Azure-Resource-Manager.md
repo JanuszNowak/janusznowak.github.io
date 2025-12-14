@@ -15,8 +15,6 @@ tags:
   - Scaling
 ---
 
-# Per-app scaling using Azure Resource Manager
-
 Implement per-app scaling for high-density hosting in Azure App Service.
 
 > **Note**
