@@ -78,7 +78,7 @@ footer:
     url: https://www.facebook.com/jnowwwak
   - label: YouTube
     icon: fab fa-fw fa-youtube
-    url: https://www.youtube.com/c/JanuszNowakjanono
+    url: https://www.youtube.com/@jnowwwak
   - label: StackOverflow
     icon: fab fa-fw fa-stack-overflow
     url: https://stackoverflow.com/users/1878728/janusz-nowak
@@ -125,3 +125,4 @@ analytics2:
   provider: azure
   azure:
     instrumentation_key: 03a77086-412d-4d25-b919-57631fd6c939
+
