@@ -52,25 +52,30 @@ Here's a comprehensive PowerShell script that connects to Microsoft Graph, retri
 if (!(Get-MgContext)) { Connect-MgGraph -Scopes "Application.Read.All" }
 
 # Get all Service Principals with password credentials
+# Note: This may take several minutes in large tenants with many Service Principals
 $allSPNs = Get-MgServicePrincipal -All -Property "Id", "DisplayName", "AppId", "PasswordCredentials"
 
 $report = foreach ($spn in $allSPNs) {
-    foreach ($credential in $spn.PasswordCredentials) {
-        $expiryDate = $credential.EndDateTime
-        $daysLeft = ($expiryDate - (Get-Date)).Days
-        
-        [PSCustomObject]@{
-            DisplayName    = $spn.DisplayName
-            AppId          = $spn.AppId
-            KeyId          = $credential.KeyId
-            ExpirationDate = $expiryDate
-            DaysRemaining  = $daysLeft
-            Status         = if ($daysLeft -le 0) { "Expired" } elseif ($daysLeft -le 30) { "Urgent" } else { "Healthy" }
+    # Only process SPNs that have password credentials
+    if ($spn.PasswordCredentials.Count -gt 0) {
+        foreach ($credential in $spn.PasswordCredentials) {
+            $expiryDate = $credential.EndDateTime
+            $daysLeft = ($expiryDate - (Get-Date)).Days
+            
+            [PSCustomObject]@{
+                DisplayName    = $spn.DisplayName
+                AppId          = $spn.AppId
+                KeyId          = $credential.KeyId
+                ExpirationDate = $expiryDate
+                DaysRemaining  = $daysLeft
+                Status         = if ($daysLeft -le 0) { "Expired" } elseif ($daysLeft -le 30) { "Urgent" } else { "Healthy" }
+            }
         }
     }
 }
 
-# Display results in a sortable table
+# Display results in a sortable table (requires graphical interface)
+# For non-GUI environments, use: $report | Sort-Object DaysRemaining | Format-Table -AutoSize
 $report | Sort-Object DaysRemaining | Out-GridView -Title "SPN Secret Expiration Report"
 ```
 
@@ -109,55 +114,81 @@ Results are sorted by days remaining and displayed in an interactive grid view f
 
 To make this monitoring solution more proactive, you can extend it to send notifications. Here are several approaches:
 
-### Option 1: Email Notifications with Send-MailMessage
+### Option 1: Email Notifications with Microsoft Graph
 
 ```powershell
 # Filter for credentials expiring soon or already expired
-$criticalCreds = $report | Where-Object { $_.DaysRemaining -le 30 }
+$criticalCredsEmail = $report | Where-Object { $_.DaysRemaining -le 30 }
 
-if ($criticalCreds.Count -gt 0) {
-    $emailBody = $criticalCreds | ConvertTo-Html -Property DisplayName, AppId, ExpirationDate, DaysRemaining, Status | Out-String
+if ($criticalCredsEmail.Count -gt 0) {
+    $emailBody = $criticalCredsEmail | ConvertTo-Html -Property DisplayName, AppId, ExpirationDate, DaysRemaining, Status | Out-String
     
+    # Using Microsoft Graph API to send email (recommended method)
     $mailParams = @{
-        To         = "admin@yourdomain.com"
-        From       = "azure-monitoring@yourdomain.com"
-        Subject    = "⚠️ Azure SPN Credentials Expiring Soon"
-        Body       = $emailBody
-        BodyAsHtml = $true
-        SmtpServer = "smtp.yourdomain.com"
+        Message = @{
+            Subject = "⚠️ Azure SPN Credentials Expiring Soon"
+            Body = @{
+                ContentType = "HTML"
+                Content = $emailBody
+            }
+            ToRecipients = @(
+                @{
+                    EmailAddress = @{
+                        Address = "admin@yourdomain.com"
+                    }
+                }
+            )
+        }
     }
     
-    Send-MailMessage @mailParams
+    Send-MgUserMail -UserId "azure-monitoring@yourdomain.com" -BodyParameter $mailParams
 }
 ```
 
-### Option 2: Microsoft Teams Webhook
+> **Note**: The legacy `Send-MailMessage` cmdlet is deprecated. Use Microsoft Graph API's `Send-MgUserMail` for modern authentication support.
+
+### Option 2: Microsoft Teams Webhook (Adaptive Card)
 
 ```powershell
-$criticalCreds = $report | Where-Object { $_.DaysRemaining -le 30 }
+$criticalCredsTeams = $report | Where-Object { $_.DaysRemaining -le 30 }
 
-if ($criticalCreds.Count -gt 0) {
+if ($criticalCredsTeams.Count -gt 0) {
     $teamsWebhook = "YOUR_TEAMS_WEBHOOK_URL"
     
-    $messageCard = @{
-        "@type"    = "MessageCard"
-        "@context" = "https://schema.org/extensions"
-        summary    = "SPN Credentials Expiring"
-        themeColor = "FF0000"
-        title      = "⚠️ Service Principal Credentials Expiring Soon"
-        sections   = @(
+    # Using Adaptive Card format (recommended over MessageCard)
+    $adaptiveCard = @{
+        type = "message"
+        attachments = @(
             @{
-                facts = $criticalCreds | ForEach-Object {
-                    @{
-                        name  = $_.DisplayName
-                        value = "Expires in $($_.DaysRemaining) days - $($_.ExpirationDate.ToString('yyyy-MM-dd'))"
-                    }
+                contentType = "application/vnd.microsoft.card.adaptive"
+                content = @{
+                    type = "AdaptiveCard"
+                    body = @(
+                        @{
+                            type = "TextBlock"
+                            size = "Large"
+                            weight = "Bolder"
+                            text = "⚠️ Service Principal Credentials Expiring Soon"
+                            color = "Attention"
+                        }
+                        @{
+                            type = "FactSet"
+                            facts = $criticalCredsTeams | ForEach-Object {
+                                @{
+                                    title = $_.DisplayName
+                                    value = "Expires in $($_.DaysRemaining) days - $($_.ExpirationDate.ToString('yyyy-MM-dd'))"
+                                }
+                            }
+                        }
+                    )
+                    '$schema' = "http://adaptivecards.io/schemas/adaptive-card.json"
+                    version = "1.4"
                 }
             }
         )
     }
     
-    Invoke-RestMethod -Uri $teamsWebhook -Method Post -Body ($messageCard | ConvertTo-Json -Depth 10) -ContentType "application/json"
+    Invoke-RestMethod -Uri $teamsWebhook -Method Post -Body ($adaptiveCard | ConvertTo-Json -Depth 10) -ContentType "application/json"
 }
 ```
 
@@ -194,15 +225,34 @@ Example runbook script:
 # Connect using Managed Identity
 Connect-MgGraph -Identity
 
-# Rest of your monitoring script here
+# Get all Service Principals with password credentials
 $allSPNs = Get-MgServicePrincipal -All -Property "Id", "DisplayName", "AppId", "PasswordCredentials"
 
-# ... (complete script from above)
+# Generate the report (same logic as the main script)
+$report = foreach ($spn in $allSPNs) {
+    if ($spn.PasswordCredentials.Count -gt 0) {
+        foreach ($credential in $spn.PasswordCredentials) {
+            $expiryDate = $credential.EndDateTime
+            $daysLeft = ($expiryDate - (Get-Date)).Days
+            
+            [PSCustomObject]@{
+                DisplayName    = $spn.DisplayName
+                AppId          = $spn.AppId
+                KeyId          = $credential.KeyId
+                ExpirationDate = $expiryDate
+                DaysRemaining  = $daysLeft
+                Status         = if ($daysLeft -le 0) { "Expired" } elseif ($daysLeft -le 30) { "Urgent" } else { "Healthy" }
+            }
+        }
+    }
+}
 
 # Export results to Automation Account output
 Write-Output "Report generated: $($report.Count) credentials monitored"
 Write-Output "Expired: $(($report | Where-Object {$_.Status -eq 'Expired'}).Count)"
 Write-Output "Urgent: $(($report | Where-Object {$_.Status -eq 'Urgent'}).Count)"
+
+# Add your notification logic here (Teams, Email, etc.)
 ```
 
 ## Best Practices
@@ -225,7 +275,7 @@ Write-Output "Urgent: $(($report | Where-Object {$_.Status -eq 'Urgent'}).Count)
 - **Solution**: Verify that Service Principals actually have password credentials configured. Some SPNs only use certificate credentials or managed identities
 
 **Issue**: Out-GridView doesn't display
-- **Solution**: On Windows Server Core or Linux, use alternative output methods like `Format-Table` or export to CSV
+- **Solution**: Out-GridView requires a graphical interface. On Windows Server Core, Linux, or in Azure Automation runbooks, use alternative output methods like `$report | Sort-Object DaysRemaining | Format-Table -AutoSize` or export to CSV with `$report | Export-Csv -Path "report.csv" -NoTypeInformation`
 
 ## Conclusion
 
@@ -242,6 +292,7 @@ Remember to regularly review and update your Service Principal credentials as pa
 ## Additional Resources
 
 - [Microsoft Graph PowerShell SDK Documentation](https://learn.microsoft.com/en-us/powershell/microsoftgraph/)
-- [Service Principals in Azure AD](https://learn.microsoft.com/en-us/azure/active-directory/develop/app-objects-and-service-principals)
+- [Service Principals in Microsoft Entra ID](https://learn.microsoft.com/en-us/azure/active-directory/develop/app-objects-and-service-principals)
 - [Best practices for application credentials](https://learn.microsoft.com/en-us/azure/active-directory/develop/security-best-practices-for-app-registration)
 - [Azure Automation Documentation](https://learn.microsoft.com/en-us/azure/automation/)
+- [Adaptive Cards for Microsoft Teams](https://adaptivecards.io/)
