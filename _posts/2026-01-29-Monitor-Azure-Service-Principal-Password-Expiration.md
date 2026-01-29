@@ -38,10 +38,13 @@ Before running the monitoring script, ensure you have:
    Install-Module Microsoft.Graph -Scope CurrentUser
    ```
 
-2. **Required Permissions**: You need the following Microsoft Graph API permission:
+2. **Required Permissions**: You need the following Microsoft Graph API permissions:
    - `Application.Read.All` - To read Service Principal and application information
+   - `Mail.Send` - Only if you plan to use the email notification feature (optional)
 
 3. **Appropriate Azure Role**: Ensure your account has sufficient permissions to read Service Principal information (e.g., Application Administrator, Cloud Application Administrator, or Global Administrator)
+
+4. **Email Requirements** (for notification scenarios): If using Microsoft Graph for email notifications, ensure the sending account has an Exchange Online mailbox or use application-level permissions
 
 ## The Monitoring Script
 
@@ -116,6 +119,11 @@ To make this monitoring solution more proactive, you can extend it to send notif
 
 ### Option 1: Email Notifications with Microsoft Graph
 
+> **Note**: This method requires:
+> - The `Mail.Send` permission in addition to `Application.Read.All`
+> - The sending user account must have an Exchange Online mailbox
+> - Connect with: `Connect-MgGraph -Scopes "Application.Read.All", "Mail.Send"`
+
 ```powershell
 # Filter for credentials expiring soon or already expired
 $criticalCredsEmail = $report | Where-Object { $_.DaysRemaining -le 30 }
@@ -134,20 +142,27 @@ if ($criticalCredsEmail.Count -gt 0) {
             ToRecipients = @(
                 @{
                     EmailAddress = @{
-                        Address = "admin@yourdomain.com"
+                        Address = "admin@contoso.com"
                     }
                 }
             )
         }
+        SaveToSentItems = $false
     }
     
-    Send-MgUserMail -UserId "azure-monitoring@yourdomain.com" -BodyParameter $mailParams
+    Send-MgUserMail -UserId "azure-monitoring@contoso.com" -BodyParameter $mailParams
 }
 ```
 
 > **Note**: The legacy `Send-MailMessage` cmdlet is deprecated. Use Microsoft Graph API's `Send-MgUserMail` for modern authentication support.
 
 ### Option 2: Microsoft Teams Webhook (Adaptive Card)
+
+> **Note**: To get your Teams Webhook URL:
+> 1. In your Teams channel, click the ••• menu
+> 2. Select "Connectors" or "Workflows"
+> 3. Add an "Incoming Webhook" connector
+> 4. Name it and copy the generated webhook URL
 
 ```powershell
 $criticalCredsTeams = $report | Where-Object { $_.DaysRemaining -le 30 }
@@ -181,6 +196,7 @@ if ($criticalCredsTeams.Count -gt 0) {
                             }
                         }
                     )
+                    # Note: $schema is a JSON property name, not a PowerShell variable
                     '$schema' = "http://adaptivecards.io/schemas/adaptive-card.json"
                     version = "1.4"
                 }
@@ -215,44 +231,77 @@ You can then create an Azure Logic App that:
 To run this monitoring automatically, deploy it as an Azure Automation Runbook:
 
 1. **Create an Automation Account** in the Azure Portal
-2. **Configure Managed Identity** with the required Microsoft Graph permissions
-3. **Create a Runbook** with the monitoring script
-4. **Schedule the Runbook** to run daily or weekly
+2. **Import Required Modules**: Add `Microsoft.Graph.Authentication` and `Microsoft.Graph.Applications` modules from the gallery
+3. **Configure Managed Identity**: Enable system-assigned or user-assigned managed identity for the Automation Account
+4. **Grant Permissions to Managed Identity**: Use PowerShell to grant Application.Read.All permission:
+   ```powershell
+   # Connect to Microsoft Graph as admin
+   Connect-MgGraph -Scopes "Application.ReadWrite.All", "AppRoleAssignment.ReadWrite.All"
+   
+   # Get the Managed Identity's service principal
+   $managedIdentity = Get-MgServicePrincipal -Filter "displayName eq 'YOUR-AUTOMATION-ACCOUNT-NAME'"
+   
+   # Get Microsoft Graph's service principal
+   $graphSP = Get-MgServicePrincipal -Filter "appId eq '00000003-0000-0000-c000-000000000000'"
+   
+   # Get the Application.Read.All role
+   $appRole = $graphSP.AppRoles | Where-Object { $_.Value -eq "Application.Read.All" }
+   
+   # Assign the role to the managed identity
+   New-MgServicePrincipalAppRoleAssignment -ServicePrincipalId $managedIdentity.Id `
+       -PrincipalId $managedIdentity.Id `
+       -AppRoleId $appRole.Id `
+       -ResourceId $graphSP.Id
+   ```
+5. **Create a Runbook** with the monitoring script
+6. **Schedule the Runbook** to run daily or weekly
 
 Example runbook script:
 
 ```powershell
-# Connect using Managed Identity
-Connect-MgGraph -Identity
+# Import required modules
+Import-Module Microsoft.Graph.Authentication
+Import-Module Microsoft.Graph.Applications
 
-# Get all Service Principals with password credentials
-$allSPNs = Get-MgServicePrincipal -All -Property "Id", "DisplayName", "AppId", "PasswordCredentials"
-
-# Generate the report (same logic as the main script)
-$report = foreach ($spn in $allSPNs) {
-    if ($spn.PasswordCredentials.Count -gt 0) {
-        foreach ($credential in $spn.PasswordCredentials) {
-            $expiryDate = $credential.EndDateTime
-            $daysLeft = ($expiryDate - (Get-Date)).Days
-            
-            [PSCustomObject]@{
-                DisplayName    = $spn.DisplayName
-                AppId          = $spn.AppId
-                KeyId          = $credential.KeyId
-                ExpirationDate = $expiryDate
-                DaysRemaining  = $daysLeft
-                Status         = if ($daysLeft -le 0) { "Expired" } elseif ($daysLeft -le 30) { "Urgent" } else { "Healthy" }
+try {
+    # Connect using Managed Identity
+    Connect-MgGraph -Identity -NoWelcome
+    
+    # Get all Service Principals with password credentials
+    $allSPNs = Get-MgServicePrincipal -All -Property "Id", "DisplayName", "AppId", "PasswordCredentials"
+    
+    # Generate the report (same logic as the main script)
+    $report = foreach ($spn in $allSPNs) {
+        if ($spn.PasswordCredentials.Count -gt 0) {
+            foreach ($credential in $spn.PasswordCredentials) {
+                $expiryDate = $credential.EndDateTime
+                $daysLeft = ($expiryDate - (Get-Date)).Days
+                
+                [PSCustomObject]@{
+                    DisplayName    = $spn.DisplayName
+                    AppId          = $spn.AppId
+                    KeyId          = $credential.KeyId
+                    ExpirationDate = $expiryDate
+                    DaysRemaining  = $daysLeft
+                    Status         = if ($daysLeft -le 0) { "Expired" } elseif ($daysLeft -le 30) { "Urgent" } else { "Healthy" }
+                }
             }
         }
     }
+    
+    # Export results to Automation Account output
+    Write-Output "Report generated: $($report.Count) credentials monitored"
+    Write-Output "Expired: $(($report | Where-Object {$_.Status -eq 'Expired'}).Count)"
+    Write-Output "Urgent: $(($report | Where-Object {$_.Status -eq 'Urgent'}).Count)"
+    
+    # Add your notification logic here (Teams, Email, etc.)
+    
+} catch {
+    Write-Error "Error occurred: $_"
+    throw
+} finally {
+    Disconnect-MgGraph | Out-Null
 }
-
-# Export results to Automation Account output
-Write-Output "Report generated: $($report.Count) credentials monitored"
-Write-Output "Expired: $(($report | Where-Object {$_.Status -eq 'Expired'}).Count)"
-Write-Output "Urgent: $(($report | Where-Object {$_.Status -eq 'Urgent'}).Count)"
-
-# Add your notification logic here (Teams, Email, etc.)
 ```
 
 ## Best Practices
